@@ -35,19 +35,29 @@
     // }
     // -------------------------------------------------------------------------
 
-    function Car(manufacturer, model, color, realaseYer, fuelConsumption, volume){
-        this.drive = function() {
-            return "car drive";
-        };
-        this.manufacturer = manufacturer;
-        this.model = model;
-        this.color = color;
-        this.realaseYer = realaseYer;
-        this.fuelConsumption = fuelConsumption;
-        this.volume = volume;
+    // function Car(manufacturer, model, color, realaseYer, fuelConsumption, volume){
+    //     this.drive = function() {
+    //         return "car drive";
+    //     };
+    //     this.manufacturer = manufacturer;
+    //     this.model = model;
+    //     this.color = color;
+    //     this.realaseYer = realaseYer;
+    //     this.fuelConsumption = fuelConsumption;
+    //     this.volume = volume;
 
+    // }
+
+    // const tesla = new Car("Tesla","pickup","black",2019,5,50);
+    // const audi = Car("Tesla","pickup","black",2019,5,50);
+    
+    // -------------------------------------------------------------------------
+    const obj = {};
+    
+    for (let i = 1; i <= 10; i++){
+        for(let j = 1;j <= 10; j++){
+            obj[`${i} * ${j} =`] = i*j;
+        }
     }
-
-    const tesla = new Car("Tesla","pickup","black",2019,5,50);
-    const audi = Car("Tesla","pickup","black",2019,5,50);
+    console.log(obj);
     
