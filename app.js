@@ -16,12 +16,38 @@
 //     }
 // console.log(sum);
 // 4) предлагать пользователю решить пример (2 + 2 * 2) до тех пор, пока он его не решит
-    for(let i = 101;i>=100;i++){
-        let qestion = +prompt("каков будет ответ примера (2 + 2 * 2) ?");
-        if(qestion === 6){
-            alert("ну наконец-то!");
-            break;
-        }
+    // for(let i = 101;i>=100;i++){
+    //     let qestion = +prompt("каков будет ответ примера (2 + 2 * 2) ?");
+    //     if(qestion === 6){
+    //         alert("ну наконец-то!");
+    //         break;
+    //     }
+    // }
+// --------------------------------------------------------------------------
+    // const student = {
+    //     firstName: "Kirill",
+    //     lastName: "Petrov",
+    //     weight: 85,
+    // }
+    
+    // function greet (person) {
+    //     return "Hello " + person.firstName + ' ' + person.lastName
+    // }
+    // -------------------------------------------------------------------------
+
+    function Car(manufacturer, model, color, realaseYer, fuelConsumption, volume){
+        this.drive = function() {
+            return "car drive";
+        };
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.color = color;
+        this.realaseYer = realaseYer;
+        this.fuelConsumption = fuelConsumption;
+        this.volume = volume;
+
     }
 
+    const tesla = new Car("Tesla","pickup","black",2019,5,50);
+    const audi = Car("Tesla","pickup","black",2019,5,50);
     
