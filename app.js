@@ -45,19 +45,77 @@
     //     this.realaseYer = realaseYer;
     //     this.fuelConsumption = fuelConsumption;
     //     this.volume = volume;
-
     // }
 
     // const tesla = new Car("Tesla","pickup","black",2019,5,50);
     // const audi = Car("Tesla","pickup","black",2019,5,50);
     
     // -------------------------------------------------------------------------
-    const obj = {};
+    // const obj = {};
     
-    for (let i = 1; i <= 10; i++){
-        for(let j = 1;j <= 10; j++){
-            obj[`${i} * ${j} =`] = i*j;
+    // for (let i = 1; i <= 10; i++){
+    //     for(let j = 1;j <= 10; j++){
+    //         obj[`${i} * ${j} =`] = i*j;
+    //     }
+    // }
+    // console.log(obj);
+        // -----------------------------------------------------------------------------
+        // const arr = [];
+        // arr.push('Axe','Void','Spectre','Zeus');
+        // let deleted = arr.pop();
+        // console.log(deleted);
+        
+        // arr.splice(1,0,'Slardar','Sand King','Death Prophet');
+        // console.log(arr);
+        // arr.splice(2,2,"New Hero");
+        // console.log(arr);
+        // console.log(arr.slice(0,3));
+        // // ---------------------------------------------------------------------------------
+
+        // let arr = [1,2,3,4,5,6,7,8,9,10];
+        // arr.forEach(callback);
+        // function callback(num,index){
+        //     fi(index%2===0){
+        //         console.log(`${num*num} это возведенное в квадрат число ${num}`)
+        //     }else{
+        //         console.log(`${num*num*num} это возведенное в куб число ${num}`);
+        //     }
+        // }
+        // ---------------------------------------------------------------------------------
+
+        function Car(manufacturer, model, color, realaseYer,speed,maxSpeed, fuelConsumption, volume){
+            this.drive = function() {
+                return "car drive";
+            };
+            this.manufacturer = manufacturer;
+            this.model = model;
+            this.color = color;
+            this.realaseYer = realaseYer;
+            this.speed = speed;
+            this.maxSpeed = maxSpeed;
+            this.fuelConsumption = fuelConsumption;
+            this.volume = volume;
         }
-    }
-    console.log(obj);
-    
+
+        function CarPrototype(){
+            this.accelerate = function(){
+                if(this.speed<300){
+                    return this.speed = this.speed +10;
+                }else{
+                    return 300;
+                }
+            };
+            this.brakes = function(){
+                if(this.speed>0){
+                    return this.speed = this.speed -10;
+                }else{
+                    return 0;
+                }
+            }
+            this.stopping = function(){
+                return 0;
+            }
+        }
+        Car.prototype = new CarPrototype();
+        
+        const tesla = new Car("Tesla","pickup","black",2019,0,300,5,50);
